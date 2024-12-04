@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar-Powered Floor Cleaning Robot Settings</title>
+    <style>/* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body and Global Settings */
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: #f4f4f4;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        /* Container for the Page Content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:#D81B60;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2em;
+            color:white;
+        }
+        
+        /* Robot Status Section */
+        .robot-status {
+            margin-bottom: 40px;
+        }
+        
+        .robot-status h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color:white;
+        }
+        
+        .status-card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .status-card p {
+            margin: 10px 0;
+        }
+        
+        /* Settings Section */
+        .settings {
+            margin-top: 20px;
+        }
+        
+        .settings h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .settings-card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: #607D8B;
+        }
+        
+        .settings-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .settings-card label {
+            font-size: 1em;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .settings-card input,
+        .settings-card select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 1em;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        
+        .settings-card input[type="range"] {
+            width: 60%;
+            margin: 10px 0;
+        }
+        
+        .settings-card span {
+            margin-left: 10px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        /* Styling for the Range Inputs */
+        input[type="range"]::-webkit-slider-runnable-track {
+            background-color: #3498db;
+            height: 8px;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            background-color: #2980b9;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Make the page mobile responsive */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        
+            .settings-card {
+                margin-bottom: 15px;
+            }
+        
+            .settings-card input[type="range"] {
+                width: 100%;
+            }
+        }
+</style>        
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Solar-Powered Floor Cleaning Robot Settings</h1>
+        </header>
+
+        <!-- Robot Status Section -->
+        <section class="robot-status">
+            <h2>Robot Status</h2>
+            <div class="status-card">
+                <p><strong>Battery Level:</strong> 75%</p>
+                <p><strong>Charging Status:</strong> Charging</p>
+                <p><strong>Solar Panel Status:</strong> Active</p>
+                <p><strong>Cleaning Mode:</strong> Dry Cleaning</p>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="settings">
+            <h2>Settings</h2>
+            <div class="settings-card">
+                <h3>Battery Settings</h3>
+                <label for="battery-threshold">Battery Low Threshold:</label>
+                <input type="range" id="battery-threshold" name="battery-threshold" min="10" max="100" value="20">
+                <span>20%</span>
+            </div>
+
+            <div class="settings-card">
+                <h3>Charging Settings</h3>
+                <label for="charging-mode">Charging Mode:</label>
+                <select id="charging-mode" name="charging-mode">
+                    <option value="solar">Solar Charging</option>
+                    <option value="manual">Manual Charging</option>
+                </select>
+            </div>
+
+            <div class="settings-card">
+                <h3>Cleaning Mode</h3>
+                <label for="cleaning-mode">Select Cleaning Mode:</label>
+                <select id="cleaning-mode" name="cleaning-mode">
+                    <option value="dry">Dry Cleaning</option>
+                    <option value="wet">Wet Cleaning</option>
+                    <option value="vacuum">Vacuum Cleaning</option>
+                </select>
+            </div>
+
+            <div class="settings-card">
+                <h3>Schedule Cleaning</h3>
+                <label for="cleaning-time">Set Cleaning Time:</label>
+                <input type="time" id="cleaning-time" name="cleaning-time">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

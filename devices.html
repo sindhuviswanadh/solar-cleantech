@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Devices</title>
+    <style>/* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#FAFAFA;
+            color: #2c3e50;
+        }
+        
+        /* Container for the Page */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #3B5998;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styling */
+        header {
+            font-family: 'Georgia', sans-serif;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            color: white ;
+        }
+        
+        /* Devices List Section */
+        .devices-list {
+            margin-bottom: 40px;
+        }
+        
+        .devices-list h2 {
+            font-size: 1.8em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .device-card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .device-card h3 {
+            font-size: 1.5em;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        
+        .device-card p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+        
+        .device-card .btn-connect {
+            background-color: #3498db;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .device-card .btn-connect:hover {
+            background-color: #2980b9;
+        }
+        
+        .device-card .connected {
+            background-color: #27ae60;
+        }
+        .add-device {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-device h2 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.add-device .form-group {
+    margin-bottom: 20px;
+}
+
+.add-device label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.add-device input,
+.add-device select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.add-device .btn-add-device {
+    background-color: #2C3E50;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-device .btn-add-device:hover {
+    background-color: #2ecc71;
+}
+        
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        
+            .device-card {
+                margin-bottom: 15px;
+            }
+            .add-device label {
+        font-size: 1em;
+    }
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Available Devices</h1>
+        </header>
+
+        <!-- Devices List Section -->
+        <section class="devices-list">
+            <h2>Select a Device to Connect</h2>
+            
+            <!-- Device 1 -->
+            <div class="device-card" id="device1">
+                <h3>Device 1</h3>
+                <p><strong>Status:</strong> <span id="status-device1">Inactive</span></p>
+                <button class="btn-connect" onclick="connectDevice('device1')">Connect</button>
+            </div>
+
+            <!-- Device 2 -->
+            <div class="device-card" id="device2">
+                <h3>Device 2</h3>
+                <p><strong>Status:</strong> <span id="status-device2">Inactive</span></p>
+                <button class="btn-connect" onclick="connectDevice('device2')">Connect</button>
+            </div>
+
+            <!-- Device 3 -->
+            <div class="device-card" id="device3">
+                <h3>Device 3</h3>
+                <p><strong>Status:</strong> <span id="status-device3">Inactive</span></p>
+                <button class="btn-connect" onclick="connectDevice('device3')">Connect</button>
+            </div>
+        </section>
+        <!-- Add New Device Section -->
+        <section class="add-device">
+            <h2>Add New Device</h2>
+            <form action="add_device.php" method="POST">
+                <div class="form-group">
+                    <label for="device-name">Device Name:</label>
+                    <input type="text" id="device-name" name="device-name" placeholder="Enter device name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="device-type">Device Type:</label>
+                    <select id="device-type" name="device-type" required>
+                        <option value="robot">Floor Cleaning Robot</option>
+                        <option value="thermostat">Smart Thermostat</option>
+                        <option value="light">Smart Light Bulb</option>
+                        <option value="camera">Security Camera</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-add-device">Add Device</button>
+                </div>
+
+    </div>
+
+    <script src="sample3.js"></script>
+</body>
+</html>

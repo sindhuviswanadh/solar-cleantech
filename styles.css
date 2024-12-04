@@ -1,0 +1,28 @@
+.device-list ul {
+    list-style: none;
+    padding: 100px;
+}
+
+.device-list li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.device-list button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.device-list button:hover {
+    background-color: #218838;
+}

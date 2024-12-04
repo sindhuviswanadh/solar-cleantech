@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>/* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: #f3cdef;
+            color: #2c3e50;
+        }
+        
+        /* Container for the Page */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-family: 'Georgia', sans-serif;
+            font-size: 2em;
+            color: #2c3e50;
+        }
+        
+        /* Contact Information Section */
+        .contact-info {
+            margin-bottom: 40px;
+        }
+        
+        .contact-info h2 {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info ul {
+            list-style-type: none;
+        }
+        
+        .contact-info li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .contact-info li strong {
+            color: #2980b9;
+        }
+        
+        /* Contact Form Section */
+        .contact-form {
+            background-color: #c3eef9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form h2 {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            background-color: #0c6dc2;
+            color: white;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        
+            .contact-info ul {
+                padding-left: 20px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+
+        <!-- Contact Information Section -->
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p>If you have any questions, feel free to reach out to us through the form below or via the contact details provided.</p>
+            <ul>
+                <li><strong>Email:</strong> support@robotcleaners.com</li>
+                <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                <li><strong>Address:</strong> 123 Clean St, Tech City, TX 75001, USA</li>
+            </ul>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
